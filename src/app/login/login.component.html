@@ -1,0 +1,12 @@
+<form (submit)="onSubmit($event)">
+  <div class="form-group">
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" name="username" [(ngModel)]="username" class="form-control" />
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" name="password" [(ngModel)]="password" class="form-control"/>
+
+    <button type="submit">Login</button>
+  </div>
+</form>

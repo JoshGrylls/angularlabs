@@ -8,8 +8,8 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username:string = '';
-  password:string = '';
+  username: string;
+  password: string;
   constructor(private route: ActivatedRoute,
               private router: Router) {  }
 
@@ -19,7 +19,10 @@ export class LoginComponent implements OnInit {
   onSubmit(event) {
     event.preventDefault();
     if(this.username == "user" && this.password == "123") {
-      localStorage.setItem('username', this.username);
+      var currentUser = {username:"user", password:"123", dob:"17/08/1999", "age":19};
+
+      localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
       this.router.navigateByUrl('/account');
     } else {
       alert("Invalid..");

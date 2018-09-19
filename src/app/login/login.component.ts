@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   onSubmit(event) {
     event.preventDefault();
     if(this.username == "user" && this.password == "123") {
-      var currentUser = {username:"user", password:"123", dob:"17/08/1999", "age":19};
+      var currentUser = {"id":1, "username":"user", "password":"123", "dob":"17/08/1999", "age":19};
 
       localStorage.setItem('currentUser', JSON.stringify(currentUser));
 

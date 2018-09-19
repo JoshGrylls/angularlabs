@@ -1,11 +1,10 @@
 <div>
   <div id="heading">
-    <img src="/assets/images/profileImg.png"/>
     <h1>My Account</h1>
     <div id="accInfo">
       <p>Name: {{username}}</p>
       <p>Date of Birth: {{dob}} </p>
-      <p>Gender: </p>
+      <p>ID: {{id}}</p>
       <p>Age: {{age}}</p>
       <p>Git: </p>
       <p>Date Joined: </p>
@@ -13,9 +12,6 @@
   </div>
 
   <div id="desc">
-    <div id="text">
-      <h1>Description</h1>
-      <p>This is a sample description</p>
-    </div>
+    <button routerLink="/login" (click)="logout()">Log Out</button>
   </div>
 </div>

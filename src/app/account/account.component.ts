@@ -20,5 +20,7 @@ export class AccountComponent implements OnInit {
     this.dob = this.currentUser["dob"];
     this.age = this.currentUser["age"];
   }
-
+  logout() {
+    localStorage.clear();
+  }
 }
